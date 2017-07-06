@@ -5,8 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="/css/chess24.css">
+    <link rel="stylesheet" href="/css/c24landing.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/ScrollMagic.js"></script>
+
 </head>
 <body>
+
+    <div class="bodyContainer mainLayout user user_dashboard">
+
+        <!-- ========== -->
+        <!-- page header -->
+        <header class="pageHeader">
+            <div class="overLayer"></div>
+            <div class="pageWrap">
+                <div class="logo">
+                    <a id="logo" class="c24-logo" href="/en"></a>
+                </div>
+                <!-- nav container -->
+                <div class="navContainerWrapper">
+                    <span class="menuBurgerButton" data-class-setter-on-click="{&quot;classname&quot;:&quot;showAdaptiveMenu&quot;, &quot;method&quot;:&quot;toggle&quot;, &quot;target&quot;:&quot;.navContainerWrapper&quot;}">
+                        <span></span>
+                    </span>
+                    <div class="navContainer">
+                        <!-- main menu -->
+                        <nav class="mainMenu">						
+                            <ul class="expandingMenuList">
+                                <li class="expandingMenu menuGroup menuGroupPlay">
+                                    <a href="/en/play/chess" class="expandingMenuTitle"><span>Play</span></a>
+                                    <input class="expandingMenuTrigger" type="checkbox" id="trigerMenuPlay" name="">
+                                    <label class="expandingMenuTriggerLabel" for="trigerMenuPlay"><span>Play</span></label>
+                                    <div class="secondaryMenuWrapper">
+                                        <div class="flexWrapper">
+                                            <ul class="">
+                                                <li class="mmenuPlayNow">
+                                                    <a href="/en/play/chess">
+                                                        Play Now<p>Play a game against a human or computer opponent</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuPlayLobby">
+                                                    <a href="/en/play/chess">
+                                                        Lobby<p>Find other players, chat, and watch games in progress</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="mmenuPlayzoneTournaments">
+                                                    <a href="/en/play/tournaments">
+                                                        Tournaments<p>Compete for trophies in the ultimate multiplayer challenge</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="mmenuPlayLeaderboard">
+                                                    <a href="/en/play/leaderboard">
+                                                        Leaderboard<p>See who's on top and how you compare!</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="expandingMenu menuGroup menuGroupLearn">
+                                    <a href="/en/learn" class="expandingMenuTitle"><span>Learn</span></a>
+                                    <input class="expandingMenuTrigger" type="checkbox" id="trigerMenuLearn" name="">
+                                    <label class="expandingMenuTriggerLabel" for="trigerMenuLearn"><span>Learn</span></label>
+                                    <div class="secondaryMenuWrapper">
+                                        <div class="flexWrapper">
+                                            <ul>
+                                                <li class="mmenuLearningPath">
+                                                    <a href="/en/learn/school">
+                                                        Courses<p>Play better chess with our structured learning paths</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="mmenuVideosLessons">
+                                                    <a href="/en/learn/videoseries">
+                                                        Video Series<p>Top players share their secrets through interactive lessons</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuEbooks">
+                                                    <a href="/en/learn/ebooks">
+                                                        eBooks<p>Browse expert analysis at leisure with our chess game viewer</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="mmenuTacticTrainer">
+                                                    <a href="/en/learn/tactics-trainer">
+                                                        Tactics Trainer <p>Improve your tactical skills with puzzles adapted to your level</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuChessDatabase">
+                                                    <a href="/en/analysis">
+                                                        Database, Analysis &amp; Coaching <p>Use our database, engine and live training tool</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="expandingMenu menuGroup menuGroupRead active">
+                                    <a href="/en/read/news" class="expandingMenuTitle"><span>Read</span></a>
+                                    <input class="expandingMenuTrigger" type="checkbox" id="trigerMenuRead" name="">
+                                    <label class="expandingMenuTriggerLabel" for="trigerMenuRead"><span>Read</span></label>
+                                    <div class="secondaryMenuWrapper">
+                                        <div class="flexWrapper">
+                                            <ul>
+                                                <li class="mmenuNews active">
+                                                    <a href="/en/read/news">
+                                                        News<p>Keep up to date with all that's going on in the chess world</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuCommunity">
+                                                    <a href="/en/community">
+                                                        Community <p>Tell your stories or join the debate in the area where you set the agenda!</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li class="mmenuEbooks">
+                                                    <a href="/en/learn/ebooks">
+                                                        eBooks<p>Browse expert analysis at leisure with our chess game viewer</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <ul>	
+                                                <li class="mmenuPlayers">
+                                                    <a href="/en/read/players">
+                                                        Players<p>Who's who in chess? Bios, ratings, games and more</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuGlossary">
+                                                    <a href="/en/read/glossary">
+                                                        Glossary<p>An A-Z guide to all the chess terms you need to know</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="expandingMenu menuGroup menuGroupWatch">
+                                    <a href="/en/watch" class="expandingMenuTitle"><span>Watch</span></a>
+                                    <input class="expandingMenuTrigger" type="checkbox" id="trigerMenuWatch" name="">
+                                    <label class="expandingMenuTriggerLabel" for="trigerMenuWatch"><span>Watch</span></label>
+                                    <div class="secondaryMenuWrapper">
+                                        <div class="flexWrapper">
+                                            <ul class="">
+                                                <li class="mmenuTournaments">
+                                                    <a href="/en/watch/live-tournaments">
+                                                        Live Tournaments<p>Live broadcasts from top events</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuLiveVideos">
+                                                    <a href="/en/live/video">
+                                                        Shows<p>Watch live &amp; on demand</p>
+                                                    </a>
+                                                </li>
+                                                <li class="mmenuVideosLessons">
+                                                    <a href="/en/learn/videoseries">
+                                                        Video Series<p>Top players share their secrets through interactive lessons</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- END main menu -->
+
+                        <!-- user menu -->
+                        <nav class="userMenu">
+                            <div class="expandingMenu">
+                                <span class="loader userPic" style="display: none;">
+                                    <img src="https://assets.chess24.com/assets/55582f6c4388dbe0b448c1f31830d07a/images/img/icon_searching_large.gif" alt="loading...">
+                                    <span>Loading...</span>
+                                </span>
+                                <a class="userPic sMenuTrigger profile" href="/en/profile/vahan" style="display: block;">
+                                    <img src="https://cdn.chess24.com/LTcSmkq5R4C1fBjs22KRLQ/26x26/alien.jpg" alt="">        <span class="name">vahan</span>
+                                </a>
+                                <div class="secondaryMenuWrapper">
+                                    <ul class="userMenuList">
+                                        <li class="linkLogin" style="display: none;">
+                                            <a href="/en/login" rel="nofollow" class="login-link">Log in</a>
+                                        </li>
+                                        <li class="linkRegister" style="display: none;">
+                                            <a href="/en/register" rel="nofollow" class="register-link">Register</a>
+                                        </li>
+                                        <li class="linkProfile">
+                                            <a href="/en/profile/vahan" class="profile" style="display: block;">My profile</a>
+                                        </li>
+                                        <li class="linkSupport en" style="display: list-item;">
+                                            <a href="https://cisha.zendesk.com/hc/en-us" target="_new">Support</a>
+                                        </li>
+                                        <li class="linkSupport de">
+                                            <a href="https://cisha.zendesk.com/hc/de" target="_new">Support</a>
+                                        </li>
+                                        <li class="linkSupport es">
+                                            <a href="/en/contact">Support</a>
+                                        </li>
+                                        <li class="linkLogout logOff">
+                                            <a id="yt1">Log out</a>            </li>
+                                        <li class="linkPremium" style="display: none;">
+                                            <a href="/en/premium?source=menu">Go Premium</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- END user menu -->
+
+                        <!-- language selector -->
+                        <nav class="langMenu">
+                            <div class="lang expandingMenu">
+                                <div class="expandingMenu">
+                                    <span class="expandingMenuTitle">
+                                        <span>
+                                            <span class="langMenuSelector">English</span>
+                                        </span>
+                                    </span>
+                                    <div class="secondaryMenuWrapper">
+                                        <ul class="langList">
+                                            <li class="active"><a class="language-change-link" href="https://chess24.com/en/read/news/aronian-i-get-over-losses-more-easily-than-wins" data-lang="en">English</a></li>
+                                            <li class=""><a class="language-change-link" href="https://chess24.com/de/lesen/news/aronian-i-get-over-losses-more-easily-than-wins" data-lang="de">Deutsch</a></li>
+                                            <li class=""><a class="language-change-link" href="https://chess24.com/es/informate/noticias/aronian-i-get-over-losses-more-easily-than-wins" data-lang="es">Español</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- END language selector -->
+                    </div>
+                </div>
+                <!-- END nav container -->
+                <!-- search -->
+                <div class="siteSearch" style="display: inline-block;">
+                    <div id="search-bar">
+                        <div>
+                            <form action="/en/search" method="get"><input type="text" value="" name="q" id="q"></form></div>
+                            <a></a>
+                        </div>
+                    </div>
+                <!-- END search -->
+            </div>
+        </header>
+        <!-- END page header -->
+        <!-- ========== -->
+
+
+        <!-- =============== -->
+        <section> 
+            VIDOEO
+        </section>
+        <!-- =============== -->
     
+
+    </div>
+
 </body>
 </html>
