@@ -11,8 +11,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'www/css/chess24.css': 'scss/chess24.scss',
-          'www/css/embed/condensed.css':'scss/embed/condensed.scss'
+          'css/c24landing.css': 'scss/c24landing.scss'
         }
       }
     },
@@ -21,8 +20,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         files:{
-          'www/css/chess24.css':'www/css/chess24.css',
-          'www/css/embed/condensed.css':'www/css/embed/condensed.css'
+          'css/c24landing.css':'css/c24landing.css'
         },
         options: {
           browsers: ['last 2 versions', 'ie >=10', 'Opera >= 6']
@@ -34,8 +32,7 @@ module.exports = function(grunt) {
     cssmin: {
 		css: {
 			files: {
-				'www/css/chess24.css':'www/css/chess24.css',
-				'www/css/embed/condensed.css':'www/css/embed/condensed.css'
+				'css/c24landing.css':'css/c24landing.css'
 			}
 		}
     },

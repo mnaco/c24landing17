@@ -1,3 +1,12 @@
+/* line 1, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
 body {
-    padding-top: 100px;
+  padding-top: 100px;
+}
+
+/* line 5, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
+.c24lpSections {
+  background: #ccc;
+  section {
+      background: #900;
+  }
 }
