@@ -1,0 +1,34 @@
+body {
+    padding-top: 80px;
+}
+
+
+// overwrites
+// .pageHeader { 
+//     background: rgba(255,255,255,0.8);
+//     .expandingMenu .expandingMenuTitle > span, 
+//     .pageWrap,
+//     .overLayer
+//     {
+//         background: transparent; 
+//     }
+// }
+
+.c24lpSections {
+    section { 
+        min-height: 400px;
+        background: #ccc;
+        border-bottom: 1px solid #555;
+    }
+
+
+    #port {
+        background: rgb(47, 49, 52);
+        margin: 1.5em 0px;
+        overflow: hidden;
+        position: relative;
+        height: 546px;
+    }
+    .parallax-layer { position: absolute; }
+
+}

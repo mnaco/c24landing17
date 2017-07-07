@@ -1,12 +1,25 @@
 /* line 1, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
 body {
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
-/* line 5, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
-.c24lpSections {
+/* line 18, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
+.c24lpSections section {
+  min-height: 400px;
   background: #ccc;
-  section {
-      background: #900;
-  }
+  border-bottom: 1px solid #555;
+}
+
+/* line 25, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
+.c24lpSections #port {
+  background: #2f3134;
+  margin: 1.5em 0px;
+  overflow: hidden;
+  position: relative;
+  height: 546px;
+}
+
+/* line 32, /Users/vahan/projects/c24landing17/scss/c24landing.scss */
+.c24lpSections .parallax-layer {
+  position: absolute;
 }

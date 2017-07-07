@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>C24</title>
 
     <link rel="stylesheet" href="/css/chess24.css">
     <link rel="stylesheet" href="/css/c24landing.css">
@@ -262,11 +262,32 @@
             <section> 
                 VIDOEO
             </section>
+            <section class=""> 
+                <div id="port">
+                    <img class="parallax-layer" src="/img/c24landing/broadcast/sinquefield1.jpg" alt="" style="width:1356px; height:546px;"/>
+                    <img class="parallax-layer" src="/img/c24landing/broadcast/sinquefield2.jpg" alt="" style="width:1346px; height:536px; opacity: .5"/>
+                </div>
+            </section>
+            <section> 
+                LAST
+            </section>
         </div>
         <!-- =============== -->
     
 
     </div>
+
+
+
+    <script src="/js/jquery.parallax.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			// Declare parallax on layers
+			jQuery('.parallax-layer').parallax({
+				mouseport: jQuery("#port")
+			});
+		});
+	</script>
 
 </body>
 </html>
